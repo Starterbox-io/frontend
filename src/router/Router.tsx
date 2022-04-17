@@ -1,11 +1,19 @@
 import { Route, Routes } from 'react-router-dom'
 import { FC } from 'react'
-import CatalogPage from '../pages/Catalog/CatalogPage'
+import { CatalogItemPage, CatalogPage } from '../pages'
 
 export const ROUTER_PATH = {
   root: {
     path: '/',
+    element: <div>Home</div>
+  },
+  catalog: {
+    path: '/catalog',
     element: <CatalogPage/>
+  },
+  catalog_item_info: {
+    path: '/catalog/:item',
+    element: <CatalogItemPage/>
   }
 }
 

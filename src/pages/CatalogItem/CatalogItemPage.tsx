@@ -1,10 +1,10 @@
 import { FC } from 'react'
 import MainLayout from '../../layouts/Main/MainLayout'
 
-const CatalogPage: FC = () => {
+const CatalogItemPage: FC = () => {
   return <MainLayout>
-        Catalog
+        Catalog item
     </MainLayout>
 }
 
-export default CatalogPage
+export default CatalogItemPage
