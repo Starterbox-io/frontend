@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "lint": "eslint src --ext src/**/*.[.ts,.tsx]",
+    "lint": "eslint src --ext src/**/**/*.[.ts,.tsx]",
     "dev": "npm run lint && npm run start",
     "start": "react-scripts start",
     "build": "react-scripts build",
