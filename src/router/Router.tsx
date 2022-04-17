@@ -1,6 +1,12 @@
-import { Route, Routes } from 'react-router-dom'
+import { Navigate, Route, Routes } from 'react-router-dom'
 import { FC } from 'react'
 import { CatalogItemPage, CatalogPage } from '../pages'
+
+/** const ROLES = {
+  ADMIN_ROLE: 'ADMIN_ROLE',
+  USER_ROLE: 'USER_ROLE',
+  GUEST_ROLE: 'GUEST_ROLE'
+} */
 
 export const ROUTER_PATH = {
   root: {
@@ -20,7 +26,10 @@ export const ROUTER_PATH = {
 export const Router: FC = () => (
     <Routes>
         {Object.entries(ROUTER_PATH).map(([key, obj]: any) => {
-          return <Route path={obj.path} element={obj.element} key={`react-router-key-${key}`}/>
+          return <Route
+                path={obj.path}
+                element={obj.path === ROUTER_PATH.root.path ? <Navigate to={ROUTER_PATH.catalog.path}/> : obj.element}
+                key={`react-router-key-${key}`}/>
         })}
         <Route path={'*'} element={'404'}/>
     </Routes>
