@@ -8,7 +8,7 @@ export const Header = styled.div`
   justify-content: flex-end;
   position: relative;
   background: silver;
-  padding: 10px 10px 25px 10px;
+  padding-bottom: 25px;
   @media screen and (min-width: 320px) {
     height: 200px;
     overflow: hidden;
