@@ -1,5 +1,5 @@
-import MainLayout from './Main/MainLayout'
+import CatalogLayout from './Catalog/CatalogLayout'
 
 export {
-  MainLayout
+  CatalogLayout
 }
