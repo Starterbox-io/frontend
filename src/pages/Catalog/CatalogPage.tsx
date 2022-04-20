@@ -1,6 +1,7 @@
 import { FC } from 'react'
 import { CatalogLayout } from '../../layouts'
 import { CatalogAddInfoList, CatalogCategoriesList, Navbar } from '../../components'
+import CatalogCategorySection from '../../components/CatalogCategorySection/CatalogCategorySection'
 
 const CatalogPage: FC = () => {
   return <CatalogLayout
@@ -17,6 +18,74 @@ const CatalogPage: FC = () => {
           'Dripper',
           'Cakes',
           'Cookies']}/>
+        <CatalogCategorySection
+            data={[
+              {
+                title: 'Coffee',
+                items: [
+                  {
+                    title: 'Capuchino',
+                    desc: 'Capuchino description',
+                    price: 2,
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Capuchino',
+                    desc: 'Capuchino description',
+                    price: 2,
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Capuchino',
+                    desc: 'Capuchino description',
+                    price: 2,
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  }
+                ]
+              },
+              {
+                title: 'Cake',
+                items: [
+                  {
+                    title: 'Cake',
+                    desc: 'Cake description',
+                    price: 2,
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Cake',
+                    desc: 'Cake description',
+                    price: 2,
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Cake',
+                    desc: 'Cake description',
+                    price: 2,
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  }
+                ]
+              }
+            ]}
+        />
     </CatalogLayout>
 }
 

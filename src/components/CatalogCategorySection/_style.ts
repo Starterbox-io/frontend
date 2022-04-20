@@ -3,14 +3,22 @@ import styled from 'styled-components'
 export const Container = styled.div`
   overflow: auto;
   display: flex;
-  width: 100%;
-  padding: 15px;
+  flex-direction: column;
+  padding: 0 15px;
 `
 
-export const Item = styled.div`
-  border-radius: 100px;
-  background: #F4F4F3;
-  padding: 20px;
-  margin-right: 10px;
-  min-width: 140px;
+export const Title = styled.div`
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  padding-bottom: 20px;
+`
+
+export const Category = styled.div`
+  margin: 20px 0;
+`
+
+export const CategoryItem = styled.div`
+  margin-bottom: 20px;
 `

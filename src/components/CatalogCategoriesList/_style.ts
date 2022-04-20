@@ -8,7 +8,6 @@ export const Container = styled.div`
 `
 
 export const Item = styled.div`
-  font-family: 'SF Pro';
   border-radius: 100px;
   color: #B0B0B0;
   margin-right: 30px;
