@@ -1,7 +1,16 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
+export const Container = styled.div``
+export const Title = styled.div`
+  font-family: 'SFPro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 33px;
+  color: #000000;
+  padding-bottom: 20px;
 `
+
 export const Header = styled.div`
   display: flex;
   flex-direction: column;
@@ -9,9 +18,9 @@ export const Header = styled.div`
   position: relative;
   background: silver;
   padding-bottom: 25px;
+  overflow: hidden;
   @media screen and (min-width: 320px) {
     height: 200px;
-    overflow: hidden;
   }
 `
 
@@ -20,6 +29,12 @@ export const Media = styled.div`
   top: 0;
   left: 0;
   z-index: 0;
+
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 `
 export const Content = styled.div`
   position: relative;

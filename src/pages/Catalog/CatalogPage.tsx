@@ -4,6 +4,7 @@ import { Navbar } from '../../components'
 
 const CatalogPage: FC = () => {
   return <CatalogLayout
+        title={'Bean’s brothers'}
         header={{
           media: {
             type: 'image',

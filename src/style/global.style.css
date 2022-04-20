@@ -2,6 +2,36 @@
     box-sizing: border-box;
 }
 
+
 :root {
 
+}
+
+
+@font-face {
+    font-family: SFPro;
+    src: url("../assets/fonts/SFPro/SFPRODISPLAYULTRALIGHTITALIC.OTF");
+    font-weight: 100
+}
+
+@font-face {
+    font-family: SFPro;
+    src: url("../assets/fonts/SFPro/SFPRODISPLAYTHINITALIC.OTF");
+    font-weight: 200
+}
+
+
+@font-face {
+    font-family: SFPro;
+    src: url("../assets/fonts/SFPro/SFPRODISPLAYREGULAR.OTF");
+}
+
+@font-face {
+    font-family: SFPro;
+    src: url("../assets/fonts/SFPro/SFPRODISPLAYBOLD.OTF");
+}
+
+@font-face {
+    font-family: SFPro;
+    src: url("../assets/fonts/SFPro/SFPRODISPLAYMEDIUM.OTF");
 }

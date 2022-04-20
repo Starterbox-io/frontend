@@ -3,9 +3,7 @@ import { Helmet } from 'react-helmet-async'
 import * as S from './_style'
 
 type TCatalogLayout = PropsWithChildren<{
-    head?: {
-        title?: string
-    },
+    title?: string
     header?: {
         media?: {
             type: 'image' | 'video'
@@ -16,12 +14,10 @@ type TCatalogLayout = PropsWithChildren<{
 }>
 
 const MainLayout: FC<TCatalogLayout> = ({
+  title,
   header,
-  children, head = {
-    title: 'Starterbox'
-  }
+  children
 }) => {
-  const { title } = head
   const headerMedia = useMemo(() => {
     const { media }: any = header
     if (media?.type === 'image') {
@@ -39,13 +35,16 @@ const MainLayout: FC<TCatalogLayout> = ({
 
   return <S.Container>
         <Helmet>
-            <title>{title}</title>
+            <title>Starterbox | {title}</title>
         </Helmet>
         {header && <S.Header>
             <S.HeaderContent>{header?.children}</S.HeaderContent>
             {header?.media && <S.Media>{headerMedia}</S.Media>}
         </S.Header>}
-        <S.Content>{children}</S.Content>
+        <S.Content>
+            {title && <S.Title>{title}</S.Title>}
+            {children}
+        </S.Content>
     </S.Container>
 }
 
