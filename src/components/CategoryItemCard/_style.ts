@@ -32,8 +32,10 @@ export const Info = styled.div`
   padding-left: 20px;
 `
 export const Media = styled.div`
-  width: 128px;
-  height: 128px;
+  min-width: 128px;
+  max-width: 128px;
+  min-height: 128px;
+  max-height: 128px;
   border-radius: 12px;
   overflow: hidden;
 `

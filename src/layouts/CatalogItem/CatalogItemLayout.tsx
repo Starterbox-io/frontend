@@ -13,7 +13,7 @@ type TCatalogLayout = PropsWithChildren<{
     }
 }>
 
-const CatalogLayout: FC<TCatalogLayout> = ({
+const CatalogItemLayout: FC<TCatalogLayout> = ({
   title,
   header,
   children
@@ -48,4 +48,4 @@ const CatalogLayout: FC<TCatalogLayout> = ({
     </S.Container>
 }
 
-export default CatalogLayout
+export default CatalogItemLayout

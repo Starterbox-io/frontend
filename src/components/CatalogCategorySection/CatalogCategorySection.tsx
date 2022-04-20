@@ -1,18 +1,24 @@
-import { FC } from 'react'
+import { FC, Fragment } from 'react'
 import * as S from './_style'
 import { CategoryItemCard } from '../index'
+import { useNavigate } from 'react-router-dom'
 
-const CatalogCategorySection: FC<any> = ({ data, scrollTo }) => {
+const CatalogCategorySection: FC<any> = ({ data, activeCategory }) => {
+  const navigate = useNavigate()
   return <S.Container>
         {data.map((section: any, k: number) => {
-          return <S.Category key={`section-key-${k}`} id={`${section.title.toLowerCase()}`}>
-                <S.Title>{section.title}</S.Title>
-                {section.items.map((item: any, key: number) => {
-                  return <S.CategoryItem key={`section-item-key-${key}`}>
-                        <CategoryItemCard
-                            data={item}/></S.CategoryItem>
-                })}
-            </S.Category>
+          return <Fragment key={`section-key-${k}`}>
+                <S.Category id={`${section.title.toLowerCase()}`}>
+                    <S.Title>{section.title}</S.Title>
+                    {section.items.map((item: any, key: number) => {
+                      return <S.CategoryItem key={`section-item-key-${key}`}
+                                               onClick={() => navigate(`/catalog/${item?.title.toLowerCase().replace(' ', '-')}`)}>
+                            <CategoryItemCard
+                                data={item}/></S.CategoryItem>
+                    })}
+                </S.Category>
+                {section?.children}
+            </Fragment>
         })}
     </S.Container>
 }

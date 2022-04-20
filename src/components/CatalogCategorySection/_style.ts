@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  overflow: auto;
+  //overflow: auto;
   display: flex;
   flex-direction: column;
   padding: 0 15px;

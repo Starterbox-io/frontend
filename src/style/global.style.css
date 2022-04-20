@@ -3,9 +3,8 @@
     font-family: 'SF Pro';
 }
 
-
-:root {
-
+html, body {
+    scroll-behavior: smooth;
 }
 
 

@@ -1,9 +1,10 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { CatalogLayout } from '../../layouts'
-import { CatalogAddInfoList, CatalogCategoriesList, Navbar } from '../../components'
-import CatalogCategorySection from '../../components/CatalogCategorySection/CatalogCategorySection'
+import { Banner, CatalogAddInfoList, CatalogCategoriesList, CatalogCategorySection, Navbar } from '../../components'
+import BannerImg from '../../assets/img/banner.jpg'
 
 const CatalogPage: FC = () => {
+  const [activeCategory, setActiveCategory] = useState(0)
   return <CatalogLayout
         title={'Bean’s brothers'}
         header={{
@@ -14,19 +15,24 @@ const CatalogPage: FC = () => {
           children: <Navbar/>
         }}>
         <CatalogAddInfoList data={Array.from(Array(100))}/>
-        <CatalogCategoriesList data={['Coffee', 'Filter',
-          'Dripper',
-          'Cakes',
-          'Cookies']}/>
+        <CatalogCategoriesList
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+            data={[
+              'Coffee',
+              'Cakes'
+            ]}/>
         <CatalogCategorySection
+            activeCategory={activeCategory}
             data={[
               {
                 title: 'Coffee',
                 items: [
                   {
-                    title: 'Capuchino',
-                    desc: 'Capuchino description',
-                    price: 2,
+                    title: 'Capuchino one',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
                     media: {
                       type: 'image',
                       src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
@@ -34,8 +40,9 @@ const CatalogPage: FC = () => {
                   },
                   {
                     title: 'Capuchino',
-                    desc: 'Capuchino description',
-                    price: 2,
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
                     media: {
                       type: 'image',
                       src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
@@ -43,8 +50,87 @@ const CatalogPage: FC = () => {
                   },
                   {
                     title: 'Capuchino',
-                    desc: 'Capuchino description',
-                    price: 2,
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  }
+                ],
+                children: <Banner title={'lol'} media={{
+                  type: 'image',
+                  src: BannerImg
+                }}/>
+              },
+              {
+                title: 'Cakes',
+                items: [
+                  {
+                    title: 'Cake',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Cake',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Cake',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  }
+                ],
+                children: <Banner title={'lol'} media={{
+                  type: 'image',
+                  src: BannerImg
+                }}/>
+              },
+              {
+                title: 'Cakes',
+                items: [
+                  {
+                    title: 'Cake',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Cake',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
+                    media: {
+                      type: 'image',
+                      src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
+                    }
+                  },
+                  {
+                    title: 'Cake',
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
                     media: {
                       type: 'image',
                       src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
@@ -53,12 +139,13 @@ const CatalogPage: FC = () => {
                 ]
               },
               {
-                title: 'Cake',
+                title: 'Cakes',
                 items: [
                   {
                     title: 'Cake',
-                    desc: 'Cake description',
-                    price: 2,
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
                     media: {
                       type: 'image',
                       src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
@@ -66,8 +153,9 @@ const CatalogPage: FC = () => {
                   },
                   {
                     title: 'Cake',
-                    desc: 'Cake description',
-                    price: 2,
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
                     media: {
                       type: 'image',
                       src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
@@ -75,8 +163,9 @@ const CatalogPage: FC = () => {
                   },
                   {
                     title: 'Cake',
-                    desc: 'Cake description',
-                    price: 2,
+                    desc: 'Arabica 100%, milk, sugar,\n' +
+                                'vanilla syrup, caramel, and...',
+                    price: '$2.99',
                     media: {
                       type: 'image',
                       src: 'https://images.pexels.com/photos/312418/pexels-photo-312418.jpeg'
@@ -84,7 +173,8 @@ const CatalogPage: FC = () => {
                   }
                 ]
               }
-            ]}
+            ]
+            }
         />
     </CatalogLayout>
 }
