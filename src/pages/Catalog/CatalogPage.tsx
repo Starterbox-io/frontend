@@ -1,6 +1,6 @@
 import { FC } from 'react'
 import { CatalogLayout } from '../../layouts'
-import { Navbar } from '../../components'
+import { CatalogAddInfoList, CatalogCategoriesList, Navbar } from '../../components'
 
 const CatalogPage: FC = () => {
   return <CatalogLayout
@@ -12,7 +12,11 @@ const CatalogPage: FC = () => {
           },
           children: <Navbar/>
         }}>
-        content
+        <CatalogAddInfoList data={Array.from(Array(100))}/>
+        <CatalogCategoriesList data={['Coffee', 'Filter',
+          'Dripper',
+          'Cakes',
+          'Cookies']}/>
     </CatalogLayout>
 }
 

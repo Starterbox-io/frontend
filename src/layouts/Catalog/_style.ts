@@ -8,7 +8,7 @@ export const Title = styled.div`
   font-size: 28px;
   line-height: 33px;
   color: #000000;
-  padding-bottom: 20px;
+  padding: 0 15px 20px 15px;
 `
 
 export const Header = styled.div`
@@ -40,7 +40,7 @@ export const Content = styled.div`
   position: relative;
   background: #fff;
   top: -25px;
-  padding: 25px 15px 15px 15px;
+  padding: 25px 0 0;
   border-radius: 25px 25px 0 0;
 `
 export const HeaderContent = styled.div`
