@@ -29,7 +29,7 @@ export const Media = styled.div`
   left: 0;
   z-index: 0;
   height: 100%;
-  //border-radius: 25px 25px 0 0;
+  width: 100%;
   overflow: hidden;
 
   & img {
