@@ -4,11 +4,10 @@ export const Container = styled.div``
 export const Title = styled.div`
   font-style: normal;
   font-weight: 700;
-  font-weight: 700;
   font-size: 18px;
   line-height: 140%;
   color: #000000;
-  padding: 0 0 20px 0;
+  padding: 0 0 10px 0;
   text-transform: capitalize;
 `
 

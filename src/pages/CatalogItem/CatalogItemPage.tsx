@@ -18,7 +18,7 @@ const CatalogItemPage: FC = () => {
                 <CloseButton/>
             </S.Close>
         }}>
-        <S.Info>$4.90 / 340 ml</S.Info>
+        <S.Info>$4.90 <span>/ 340 ml</span></S.Info>
         <S.Desc>
             Arabica 100%, milk, sugar, vanilla syrup, caramel,
             sugar, vanilla syrup, caramel,
@@ -31,14 +31,38 @@ const CatalogItemPage: FC = () => {
             </S.Item>
 
             <S.Item>
+                <S.ItemTitle>Mindale milk</S.ItemTitle>
+                <S.ItemPrice>+$1.90</S.ItemPrice>
+            </S.Item>
+
+            <S.Item>
+                <S.ItemTitle>Alternative milk</S.ItemTitle>
+                <S.ItemPrice>+$1.90</S.ItemPrice>
+            </S.Item>
+
+            <S.Item>
+                <S.ItemTitle>Banana milk</S.ItemTitle>
+                <S.ItemPrice>+$1.90</S.ItemPrice>
+            </S.Item>
+        </S.Section>
+
+        <S.Section>
+            <S.SectionTitle>Something more</S.SectionTitle>
+            <S.Item>
                 <S.ItemTitle>Coconut milk</S.ItemTitle>
                 <S.ItemPrice>+$1.90</S.ItemPrice>
             </S.Item>
 
             <S.Item>
-                <S.ItemTitle>Coconut milk</S.ItemTitle>
-                <S.ItemPrice>+$1.90</S.ItemPrice>
+                <S.ItemTitle>Choco waffle</S.ItemTitle>
+                <S.ItemPrice>+$2.40</S.ItemPrice>
             </S.Item>
+
+            <S.Item>
+                <S.ItemTitle>Cheese cake classic</S.ItemTitle>
+                <S.ItemPrice>+$3.50</S.ItemPrice>
+            </S.Item>
+
         </S.Section>
     </CatalogItemLayout>
 }
