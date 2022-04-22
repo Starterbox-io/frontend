@@ -14,7 +14,7 @@ const CatalogPage: FC = () => {
           },
           children: <Navbar/>
         }}>
-        <CatalogAddInfoList data={Array.from(Array(100))}/>
+        <CatalogAddInfoList data={['⏱ 10:00 — 21:00', '🌱 Arabica 100%', '🐶 Pet friendly', '⏱ 10:00 — 21:00', '🌱 Arabica 100%', '🐶 Pet friendly']}/>
         <CatalogCategoriesList
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}
