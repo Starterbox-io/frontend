@@ -10,12 +10,14 @@ const CatalogCategorySection: FC<any> = ({ data, activeCategory }) => {
           return <Fragment key={`section-key-${k}`}>
                 <S.Category id={`${section.title.toLowerCase()}`}>
                     <S.Title>{section.title}</S.Title>
+                    <S.CategoryList>
                     {section.items.map((item: any, key: number) => {
                       return <S.CategoryItem key={`section-item-key-${key}`}
                                                onClick={() => navigate(`/catalog/${item?.title.toLowerCase().replace(' ', '-')}`)}>
                             <CategoryItemCard
                                 data={item}/></S.CategoryItem>
                     })}
+                    </S.CategoryList>
                 </S.Category>
                 {section?.children}
             </Fragment>

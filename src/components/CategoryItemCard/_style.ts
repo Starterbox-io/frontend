@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   display: flex;
+  max-width: 345px;
 `
 export const Title = styled.div`
   font-weight: 700;

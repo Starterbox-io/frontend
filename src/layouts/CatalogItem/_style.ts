@@ -38,6 +38,7 @@ export const Media = styled.div`
     object-fit: cover;
   }
 `
+
 export const Content = styled.div`
   position: relative;
   background: #fff;
