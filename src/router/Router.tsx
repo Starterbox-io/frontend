@@ -1,6 +1,6 @@
 import { Navigate, Route, Routes } from 'react-router-dom'
 import { FC } from 'react'
-import { CatalogItemPage, CatalogPage } from '../pages'
+import { CatalogInfoPage, CatalogItemPage, CatalogPage } from '../pages'
 
 /** const ROLES = {
   ADMIN_ROLE: 'ADMIN_ROLE',
@@ -16,6 +16,10 @@ export const ROUTER_PATH = {
   catalog: {
     path: '/catalog',
     element: <CatalogPage/>
+  },
+  catalog_info: {
+    path: '/catalog/info',
+    element: <CatalogInfoPage/>
   },
   catalog_item_info: {
     path: '/catalog/:item',
