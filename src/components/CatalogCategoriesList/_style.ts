@@ -5,6 +5,13 @@ export const Container = styled.div`
   display: flex;
   width: 100%;
   padding: 15px;
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const Item = styled.div`

@@ -5,6 +5,7 @@ import BannerImg from '../../assets/img/banner.jpg'
 
 const CatalogPage: FC = () => {
   const [activeCategory, setActiveCategory] = useState(0)
+
   return <CatalogLayout
         title={'Bean’s brothers'}
         header={{
@@ -14,7 +15,8 @@ const CatalogPage: FC = () => {
           },
           children: <Navbar/>
         }}>
-        <CatalogAddInfoList data={['⏱ 10:00 — 21:00', '🌱 Arabica 100%', '🐶 Pet friendly', '⏱ 10:00 — 21:00', '🌱 Arabica 100%', '🐶 Pet friendly']}/>
+        <CatalogAddInfoList
+            data={['⏱ 10:00 — 21:00', '🌱 Arabica 100%', '🐶 Pet friendly', '⏱ 10:00 — 21:00', '🌱 Arabica 100%', '🐶 Pet friendly']}/>
         <CatalogCategoriesList
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}

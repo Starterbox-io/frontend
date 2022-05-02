@@ -4,11 +4,14 @@ import '../style/global.style.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Router } from '../router/Router'
 import { HelmetProvider } from 'react-helmet-async'
+import { ModalProvider } from '../context/Modal/ModalContext'
 
 const App: FC = () => {
   return <HelmetProvider>
         <BrowserRouter>
-            <Router/>
+            <ModalProvider>
+                <Router/>
+            </ModalProvider>
         </BrowserRouter>
     </HelmetProvider>
 }
