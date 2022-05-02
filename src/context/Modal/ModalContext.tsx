@@ -21,6 +21,7 @@ export type TModal = {
     state: boolean,
     content: ReactNode
     type?: TModelType,
+    index?: number
 }
 
 type TModalContext = {
